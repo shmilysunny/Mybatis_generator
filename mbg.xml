@@ -1,0 +1,37 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="simple" targetRuntime="MyBatis3">
+        <!--指向数据库连接-->
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://172.19.71.164:59530/training"
+                        userId="postgre953"
+                        password="postgre953"
+        />
+
+        <!--生成对应的实体类
+        targetPackage：指定生成java文件的目录
+        targetProject：放在那个工程的哪个目录下
+        -->
+        <javaModelGenerator targetPackage="com.zx.entity" targetProject="src/main/java"/>
+
+        <!--SQL映射文件生成器
+        targetPackage：指定生成java文件的目录
+        targetProject：放在那个工程的哪个目录下
+        -->
+        <sqlMapGenerator targetPackage="mybatis.mapper" targetProject="src/main/resources"/>
+
+        <!--dao接口生成器-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zx.mapper" targetProject="src/main/java"/>
+
+        <!--指定要逆向生成的数据表
+        tableName:表名
+        domainObjectName:对象名
+        -->
+        <table tableName="menu" domainObjectName="Menu" enableCountByExample="true" enableDeleteByExample="true" enableUpdateByExample="true" selectByExampleQueryId="true" enableSelectByExample="true"/>
+        <table tableName="role" domainObjectName="Role" enableCountByExample="true" enableDeleteByExample="true" enableUpdateByExample="true" selectByExampleQueryId="true" enableSelectByExample="true"/>
+        <table tableName="permission" domainObjectName="Permission" enableCountByExample="true" enableDeleteByExample="true" enableUpdateByExample="true" selectByExampleQueryId="true" enableSelectByExample="true"/>
+        <table tableName="account" domainObjectName="Account" enableCountByExample="true" enableDeleteByExample="true" enableUpdateByExample="true" selectByExampleQueryId="true" enableSelectByExample="true"/>
+    </context>
+</generatorConfiguration>
