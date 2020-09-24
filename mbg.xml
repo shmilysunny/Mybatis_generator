@@ -4,10 +4,10 @@
 <generatorConfiguration>
     <context id="simple" targetRuntime="MyBatis3">
         <!--指向数据库连接-->
-        <jdbcConnection driverClass="org.postgresql.Driver"
-                        connectionURL="jdbc:postgresql://172.19.71.164:59530/training"
-                        userId="postgre953"
-                        password="postgre953"
+        <jdbcConnection driverClass="XXXX"
+                        connectionURL="jdbc:XXX://XXX:XXX/XXX"
+                        userId="XXX"
+                        password="XXX"
         />
 
         <!--生成对应的实体类
